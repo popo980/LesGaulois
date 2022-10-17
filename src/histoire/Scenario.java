@@ -6,15 +6,15 @@ import personnage.Druide;
 public class Scenario {
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Astérix", 3);
-		Gaulois obelix = new Gaulois("Obélix", 1000);
+		Gaulois asterix = new Gaulois("Asterix", 3);
+		Gaulois obelix = new Gaulois("Obelix", 1000);
 		Romain minus = new Romain("Minus", 15);
 		Druide panoramix = new Druide("Panoramix", 5, 10);
 		
-		panoramix.parler("je vais aller préparer une petite potion...");
+		panoramix.parler("je vais aller preparer une petite potion...");
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
-		obelix.parler("par Bénélos, ce n'est pas juste");
+		obelix.parler("par Benelos, ce n'est pas juste");
 		panoramix.booster(asterix);
 		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
