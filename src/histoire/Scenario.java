@@ -14,7 +14,7 @@ public class Scenario {
 		panoramix.parler("je vais aller preparer une petite potion...");
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
-		obelix.parler("par Benelos, ce n'est pas juste");
+		obelix.parler("par nelos, ce n'est pas juste");
 		panoramix.booster(asterix);
 		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
