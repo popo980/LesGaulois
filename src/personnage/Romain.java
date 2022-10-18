@@ -42,6 +42,7 @@ public class Romain  {
 				}else {
 					this.equiperEquipement(armure);
 				}
+				break;
 			}
 			default:
 				this.equiperEquipement(armure);
