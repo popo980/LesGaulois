@@ -4,7 +4,7 @@ import personnage.Druide;
 import personnage.Equipement;
 import personnage.Gaulois;
 import personnage.Romain;
-//import villagegaulois.Musee;
+import lieu.Musee;
 
 public class Scenario {
 
@@ -18,24 +18,26 @@ public class Scenario {
 		obelix.parler("Par Bélénos, ce n'est pas juste !");
 		druide.booster(asterix);
 		asterix.parler("Bonjour");
-		Romain minus = new Romain("Minus", 6);
-		Romain milexcus = new Romain("Milexcus", 8);
+		Romain minus = new Romain("Minus", 6, false);
+		Romain milexcus = new Romain("Milexcus", 8, false);
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.CASQUE);
 		minus.sEquiper(Equipement.BOUCLIER);
 		minus.sEquiper(Equipement.CASQUE);
 		milexcus.sEquiper(Equipement.CASQUE);
+		System.out.println('\n');
 		minus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(minus);
-		} while (minus.getForce() > 0);
+		} while (minus.getForce() > 0 && !(minus.getAbandonG()));
+		System.out.println("\n");
 		milexcus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(milexcus);
-		} while (milexcus.getForce() > 0);
+		} while (milexcus.getForce() > 0 && !(milexcus.getAbandonG()));
 		
-//		Partie a decommenter
-		
-//		Musee musee = new Musee();
-//		asterix.faireUneDonnation(musee);
+		Musee musee = new Musee();
+		asterix.faireUneDonnation(musee);
 
 	}
 
