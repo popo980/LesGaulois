@@ -6,8 +6,8 @@ public class Gaulois {
 	private int effetPotion=1;
 	
 	//__________________________________________________________________
-	private int nb_trophees;
-	private Equipement trophees[] = new Equipement[100];
+	private int nbTrophees;
+	private Equipement[] trophees = new Equipement[100];
 	//__________________________________________________________________
 	
 	
@@ -31,8 +31,7 @@ public class Gaulois {
 //________________________________________________________________________________
 
 	private String prendreParole() {
-		String texte = "Le gaulois " + nom + " : ";
-		return texte;
+		return "Le gaulois " + nom + " : ";
 		}	
 	
 //________________________________________________________________________________
@@ -47,12 +46,10 @@ public class Gaulois {
 
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans lamâchoire de " + romain.getNom());
-		Equipement trophees[] = romain.recevoirCoup((force / 3) *
-		effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++,nb_trophees++) {
-			this.trophees[nb_trophees] = trophees[i];
+		Equipement[] equipementEjecte = romain.recevoirCoup((force / 3) *effetPotion);
+		for (int i = 0; equipementEjecte != null && i < equipementEjecte.length; i++,nbTrophees++) {
+			this.trophees[nbTrophees] = equipementEjecte[i];
 			}
-		return;
 		}
 //________________________________________________________________________________
 //________________________________________________________________________________
@@ -61,6 +58,7 @@ public class Gaulois {
 		this.parler("Merci Druide, je sens que ma force est "+ this.effetPotion + " decuplee !");
 	}
 	
+	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
